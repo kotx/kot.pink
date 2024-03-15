@@ -1,11 +1,16 @@
----
-import NavLink from "./NavLink.astro";
----
+<style>
+	nav ul li {
+		@apply m-0 h-min list-none p-0;
+	}
+</style>
 
 <nav class="text-md">
 	<ul class="flex list-none items-center gap-5 font-semibold">
-		<NavLink href="/">Kot</NavLink>
-		<NavLink href="/blog">Blog</NavLink>
-		<!-- TODO: underline bar that moves between links -->
+		<li><a href="/">Kot</a></li>
+		<li><a href="/blog">Blog</a></li>
+		<span class="flex-1"></span>
+		<li><a href="https://bsky.app/profile/kot.pink" target="_blank">Blue Sky</a></li>
+		<li><a href="https://github.com/kotx" target="_blank">GitHub</a></li>
+		<li><a href="mailto:kot@yukata.dev" target="_blank">Email</a></li>
 	</ul>
 </nav>

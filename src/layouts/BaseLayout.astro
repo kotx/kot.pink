@@ -1,12 +1,18 @@
 ---
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config.mjs";
+
+const tw = resolveConfig(tailwindConfig);
+
 import "../global.css";
 
 interface Props {
 	title?: string;
 	sitename?: string;
+	description?: string;
 }
 
-const { title, sitename = "Kot" } = Astro.props;
+const { title, sitename = "Kot", description = "Hey, I'm Kot! Nice to meet you." } = Astro.props;
 ---
 
 <html lang="en" class="h-full">
@@ -14,6 +20,28 @@ const { title, sitename = "Kot" } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:type" content="website" />
+
+		<meta property="og:site_name" content={sitename} />
+		<meta property="og:locale" content="en" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={Astro.site} />
+
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:card" content="summary" />
+
+		<meta itemprop="name" content={title} />
+		<meta itemprop="description" content={description} />
+		<meta name="description" content={description} />
+
+		<meta name="theme-color" content={tw.theme.colors.pink[500]} />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="me" href="https://uwu.social/@kot" />
+		<link rel="me" href="https://awau.social/@kot" />
+
 		<title>
 			{title && title !== sitename ? `${title} :: ${sitename}` : sitename}
 		</title>
