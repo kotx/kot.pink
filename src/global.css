@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	a {
+		@apply text-pink-600 hover:text-pink-800 dark:text-pink-300 dark:hover:text-pink-400;
+	}
+}
+
+@layer components {
+	.card {
+		@apply rounded-md bg-white p-4 dark:bg-purpler-900;
+	}
+}

@@ -1,0 +1,24 @@
+---
+import "../global.css";
+
+interface Props {
+	title?: string;
+	sitename?: string;
+}
+
+const { title, sitename = "Kot" } = Astro.props;
+---
+
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>
+			{title ? `${title} :: ${sitename}` : sitename}
+		</title>
+	</head>
+	<body class="h-full bg-neutral-100 dark:bg-purpler-950 dark:text-white">
+		<slot />
+	</body>
+</html>

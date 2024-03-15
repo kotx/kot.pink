@@ -1,0 +1,17 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import MainLayout from "./MainLayout.astro";
+
+type Props = MarkdownLayoutProps<{
+	title: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout title={frontmatter.title}>
+	<article class="prose prose-neutral prose-headings:mt-2 prose-h1:mb-5 prose-headings:mb-4 dark:prose-invert">
+		<h1>{frontmatter.title}</h1>
+		<slot />
+	</article>
+</MainLayout>

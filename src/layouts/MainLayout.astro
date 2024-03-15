@@ -1,0 +1,26 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title}>
+	<div class="mx-4 flex h-full flex-col gap-4 md:mx-auto md:w-5/6">
+		<header class="card rounded-t-none">
+			<NavBar />
+		</header>
+		<main class="card flex-1">
+			<slot />
+		</main>
+		<footer class="card flex gap-3 rounded-b-none">
+			<p class="text-neutral-700 dark:text-neutral-300">&copy; Kot 2024. All rights reserved.</p>
+			<span class="flex-1"></span>
+			<p><a target="_blank" href="https://github.com/kotx/kot.pink">source</a></p>
+		</footer>
+	</div>
+</BaseLayout>
