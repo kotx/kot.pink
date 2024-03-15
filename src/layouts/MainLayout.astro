@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-	<div class="mx-4 flex h-full flex-col gap-4 md:mx-auto md:w-5/6">
+	<div class="mx-4 flex h-full flex-col gap-4 md:mx-auto md:w-2/3">
 		<header class="card rounded-t-none">
 			<NavBar />
 		</header>
@@ -21,6 +21,7 @@ const { title } = Astro.props;
 			<p class="text-neutral-700 dark:text-neutral-300">&copy; Kot 2024. All rights reserved.</p>
 			<span class="flex-1"></span>
 			<p><a target="_blank" href="https://github.com/kotx/kot.pink">source</a></p>
+			<p><a href="mail:kot@yukata.dev">contact</a></p>
 		</footer>
 	</div>
 </BaseLayout>

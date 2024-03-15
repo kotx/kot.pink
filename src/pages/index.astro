@@ -1,7 +1,51 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import ProseLayout from "../layouts/ProseLayout.astro";
+import SponsorList from "../components/SponsorList.astro";
 ---
 
-<MainLayout>
-	<h1>hi</h1>
-</MainLayout>
+<ProseLayout title="Kot">
+	<Fragment slot="heading">
+		<h1
+			class="inline-block bg-gradient-to-tr from-purple-500 to-pink-500 bg-clip-text !text-transparent dark:from-purple-400 dark:to-pink-400"
+		>
+			Kot C.
+		</h1>
+		<hr />
+	</Fragment>
+
+	<h2 title="Hello!">About me</h2>
+	<p>Hey, I'm Kot! I'm a comp sci student at the <a href="https://wisc.edu">University of Wisconsin</a>.</p>
+	<p>I have experience with frontend, backend, and fullstack development.</p>
+
+	<h2 title="Less is more!">Languages</h2>
+	<ul>
+		<li>JavaScript/TypeScript &mdash; React, Next.js, serverless</li>
+		<li>Go &mdash; microservices, gRPC</li>
+		<li>Rust &mdash; high-performance computing, graphics, web APIs</li>
+		<li>Python &mdash; data processing, machine learning</li>
+		<li>Bash &mdash; sysadmin, utility</li>
+	</ul>
+
+	<h2>Projects</h2>
+	<ul>
+		<li>
+			<a href="https://github.com/kotx/render">render</a>, a Cloudflare Worker that serves objects from a Cloudflare R2
+			bucket.
+		</li>
+		<li>
+			<a href="https://github.com/kotx/aster">aster</a>, another Cloudflare Worker that lets users reliably upload
+			objects to Cloudflare R2.
+		</li>
+		<li>
+			<a href="https://github.com/kotx/laplace">laplace</a>, a program to use a RPi Pico microcontroller for Wii U
+			motion controls!
+		</li>
+	</ul>
+
+	<h2 title="Thank you!">Sponsors</h2>
+	<p>
+		Thanks to these awesome people and organizations for
+		<a target="_blank" href="https://github.com/sponsors/kotx">sponsoring me</a>!
+	</p>
+	<SponsorList />
+</ProseLayout>

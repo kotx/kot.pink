@@ -7,9 +7,9 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				purpler: {
-					900: "#2F0C4C",
-					950: "#1E0532",
+				purple: {
+					960: "#2F0C4C",
+					970: "#1E0532",
 				},
 			},
 		},

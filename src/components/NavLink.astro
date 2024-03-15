@@ -1,22 +1,14 @@
 ---
-import { clsx } from "clsx";
-
 interface Props {
 	href: string;
 }
 
 const { href } = Astro.props;
-const active = href === Astro.url.pathname;
+// const active = href === Astro.url.pathname;
 ---
 
 <li class="m-0 h-min list-none p-0">
-	<a
-		href={href}
-		class={clsx(
-			"text-neutral-800 hover:text-pink-600 dark:text-neutral-100 dark:hover:text-pink-300",
-			active && "text-pink-600 dark:text-pink-300",
-		)}
-	>
+	<a href={href}>
 		<slot />
 	</a>
 </li>

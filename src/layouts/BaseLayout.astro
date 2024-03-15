@@ -15,10 +15,10 @@ const { title, sitename = "Kot" } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>
-			{title ? `${title} :: ${sitename}` : sitename}
+			{title && title !== sitename ? `${title} :: ${sitename}` : sitename}
 		</title>
 	</head>
-	<body class="h-full bg-neutral-100 dark:bg-purpler-950 dark:text-white">
+	<body class="h-full bg-purple-50 dark:bg-purple-970 dark:text-white">
 		<slot />
 	</body>
 </html>

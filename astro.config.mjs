@@ -20,5 +20,9 @@ export default defineConfig({
 	markdown: {
 		remarkPlugins: [remarkSkipHeading],
 	},
+	image: {
+		domains: ["avatars.githubusercontent.com", "cdn.erisa.uk", "joscomputing.space"],
+		remotePatterns: [{ protocol: "https" }],
+	},
 	site: "https://kot.pink",
 });
