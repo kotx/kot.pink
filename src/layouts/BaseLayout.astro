@@ -12,7 +12,7 @@ interface Props {
 	description?: string;
 }
 
-const { title, sitename = "Kot", description = "Hey, I'm Kot! Nice to meet you." } = Astro.props;
+const { title, sitename = "Kot", description = "hey!" } = Astro.props;
 ---
 
 <html lang="en" class="h-full">
@@ -22,7 +22,7 @@ const { title, sitename = "Kot", description = "Hey, I'm Kot! Nice to meet you."
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:type" content="website" />
 
-		<meta property="og:site_name" content={sitename} />
+		<meta property="og:site_name" content={"Kot's Website"} />
 		<meta property="og:locale" content="en" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
