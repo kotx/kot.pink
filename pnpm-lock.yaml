@@ -20,6 +20,9 @@ dependencies:
   astro:
     specifier: ^4.5.2
     version: 4.5.2(typescript@5.4.2)
+  sakana-widget:
+    specifier: ^2.7.0
+    version: 2.7.0
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
@@ -876,6 +879,10 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: false
+
+  /@juggle/resize-observer@3.4.0:
+    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -3611,6 +3618,13 @@ packages:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: false
 
+  /sakana-widget@2.7.0:
+    resolution: {integrity: sha512-rxS4usEA2ZCIlgSIacITEsSF1htLPaaczrKKtBH78p6qKmtll4Bsmx+4cqfTsTi3GAxdIqF71DslZtVWxo6rpw==}
+    dependencies:
+      '@juggle/resize-observer': 3.4.0
+      tslib: 2.6.2
+    dev: false
+
   /sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
     dependencies:
@@ -4030,7 +4044,6 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     requiresBuild: true
     dev: false
-    optional: true
 
   /tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
