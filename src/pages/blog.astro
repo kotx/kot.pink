@@ -1,5 +1,11 @@
 ---
-import ProseLayout from "../layouts/ProseLayout.astro";
+import Prose from "../components/Prose.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
 ---
 
-<ProseLayout title="Blog" />
+<MainLayout title="Blog">
+    <Prose>
+        <h1>Blog</h1>
+    </Prose>
+</MainLayout>
