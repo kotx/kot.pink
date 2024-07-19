@@ -4,7 +4,7 @@
 
 @layer base {
 	a[href] {
-		@apply text-pink-600  dark:text-pink-300;
+		@apply text-pink-600 dark:text-pink-300;
 		@apply hover:text-pink-800 dark:hover:text-pink-400;
 		@apply active:text-pink-800 dark:active:text-pink-400;
 	}
