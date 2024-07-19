@@ -4,12 +4,13 @@ import NavBar from "../components/NavBar.astro";
 
 interface Props {
 	title?: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
 	<div class="mx-4 flex h-full flex-col gap-4 md:mx-auto md:w-2/3">
 		<header class="card rounded-t-none">
 			<NavBar />
