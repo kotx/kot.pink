@@ -5,8 +5,11 @@
 @layer base {
 	a[href] {
 		@apply text-pink-600 dark:text-pink-300;
+		@apply fill-pink-600 dark:fill-pink-300;
 		@apply hover:text-pink-800 dark:hover:text-pink-400;
+		@apply hover:fill-pink-800 dark:hover:fill-pink-400;
 		@apply active:text-pink-800 dark:active:text-pink-400;
+		@apply active:fill-pink-800 dark:active:fill-pink-400;
 	}
 
 	hr {
