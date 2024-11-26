@@ -1,4 +1,8 @@
 {
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"css.lint.unknownAtRules": "ignore"
+  "deno.lint": true,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "css.lint.unknownAtRules": "ignore",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
 }
