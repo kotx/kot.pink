@@ -11,11 +11,12 @@ export default ({ comp }: Lume.Data) => (
           rel="noreferrer"
           class=""
         >
-          <picture class="mx-auto sm:mx-inherit sm:float-right border-4 hover:border-pink-600 border-pink-500 transition-colors rounded-full w-32 sm:w-40">
+          <picture>
             <source srcset="/img/avatar.webp" type="image/webp" />
             <img
               src="/img/avatar.jpg"
               alt="profile picture, illustration of a blonde witch winking and holding a finger up"
+              class="mx-auto sm:mx-inherit sm:float-right border-4 hover:border-pink-600 border-pink-500 transition-colors rounded-full w-32 sm:w-40"
             />
           </picture>
         </a>
