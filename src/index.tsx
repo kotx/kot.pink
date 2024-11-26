@@ -5,12 +5,19 @@ export default ({ comp }: Lume.Data) => (
   <article class="mx-auto sm:mt-10 sm:w-3/4 2xl:w-4/10 text-xl">
     <main class="sm:shadow-xl sm:shadow-pink-500/20 sm:border sm:border-pink-950 bg-black p-4 sm:p-8 sm:rounded-lg">
       <header class="mb-4">
-        <a href="https://github.com/kotx" target="_blank" rel="noreferrer" class="">
-          <img
-            src="/img/avatar.png"
-            class="mx-auto sm:mx-inherit sm:float-right border-4 hover:border-pink-600 border-pink-500 transition-colors rounded-full w-32 sm:w-40"
-            alt="profile picture, illustration of a blonde witch winking and holding a finger up"
-          />
+        <a
+          href="https://github.com/kotx"
+          target="_blank"
+          rel="noreferrer"
+          class=""
+        >
+          <picture class="mx-auto sm:mx-inherit sm:float-right border-4 hover:border-pink-600 border-pink-500 transition-colors rounded-full w-32 sm:w-40">
+            <source srcset="/img/avatar.webp" type="image/webp" />
+            <img
+              src="/img/avatar.jpg"
+              alt="profile picture, illustration of a blonde witch winking and holding a finger up"
+            />
+          </picture>
         </a>
         <h1 class="font-bold text-4xl text-pink-500">Kot C.</h1>
         <p>Comp sci student, software engineer and creator of things.</p>
