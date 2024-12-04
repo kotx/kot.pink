@@ -10,7 +10,7 @@ export default ({ title, children }: Lume.Data) => (
       <meta property="og:locale" content="en" />
       <meta property="og:title" content={title} />
       <meta property="og:url" content="https://kot.pink" />
-      <meta property="og:image" content="https://kot.pink/img/avatar.jpg">
+      <meta property="og:image" content="https://kot.pink/img/avatar.jpg" />
       <meta name="theme-color" content="#ec4899" />
 
       <meta name="twitter:title" content={title} />
