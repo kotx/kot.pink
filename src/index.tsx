@@ -91,6 +91,14 @@ export default ({ comp }: Lume.Data) => (
       >
         repo
       </a>
+      <a
+        class="text-pink-500 underline"
+        href="https://status.kot.pink"
+        target="_blank"
+        rel="noreferrer"
+      >
+        status
+      </a>
     </footer>
   </article>
 );
