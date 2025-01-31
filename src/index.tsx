@@ -83,22 +83,26 @@ export default ({ comp }: Lume.Data) => (
           wikimedia commons
         </a>
       </p>
-      <a
-        class="text-pink-500 underline"
-        href="https://github.com/kotx/kot.pink"
-        target="_blank"
-        rel="noreferrer"
-      >
-        repo
-      </a>
-      <a
-        class="text-pink-500 underline"
-        href="https://status.kot.pink"
-        target="_blank"
-        rel="noreferrer"
-      >
-        status
-      </a>
+      <p>
+        <a
+          class="text-pink-500 underline"
+          href="https://github.com/kotx/kot.pink"
+          target="_blank"
+          rel="noreferrer"
+        >
+          repo
+        </a>
+      </p>
+      <p>
+        <a
+          class="text-pink-500 underline"
+          href="https://status.kot.pink"
+          target="_blank"
+          rel="noreferrer"
+        >
+          status
+        </a>
+      </p>
     </footer>
   </article>
 );
