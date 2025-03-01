@@ -20,7 +20,6 @@ export default ({ title, children }: Lume.Data) => (
       <link rel="me" href="https://awau.social/@kot" />
       <link rel="webmention" href="https://webmention.io/kot.pink/webmention" />
 
-      <link rel="stylesheet" href="/fonts.css" />
       <link rel="stylesheet" href="/site.css" />
     </head>
     <body class="bg-neutral-950 font-sans text-white">{children}</body>
