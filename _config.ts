@@ -7,6 +7,7 @@ import unoConfig from "./uno.config.ts";
 
 const site = lume({
   src: "./src",
+  location: new URL("https://kot.pink")
 }).copy("img")
   .use(unocss({
     cssFile: "site.css",

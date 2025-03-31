@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /cdn-cgi/
-Sitemap: https://kot.pink/sitemap-index.xml
 
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
