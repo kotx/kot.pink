@@ -35,8 +35,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.amendLibrary("md", (mdLib) => {
     mdLib.use(anchor, {
-      permalink: true,
-      permalinkSymbol: "#",
+      permalink: anchor.permalink.headerLink(),
     });
   });
 
@@ -44,7 +43,7 @@ export default function (eleventyConfig) {
     transformOnRequest: false, // BUG: `eleventy --serve` exits immediately when this is true
     sharpOptions: {
       animated: true,
-    }
+    },
   });
 
   eleventyConfig.addDataExtension("yaml", (content) => yaml.load(content));
@@ -55,10 +54,10 @@ export default function (eleventyConfig) {
     const dateDisplay = iso
       ? dateObj.toISOString()
       : dateObj.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
     return `<time datetime="${dateObj.toISOString()}">${dateDisplay}</time>`;
   });
 

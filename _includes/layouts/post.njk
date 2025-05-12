@@ -6,8 +6,8 @@ layout: "layouts/base.njk"
     <header>
         <h1>{{ title }}</h1>
         <p>
-            Published {% datetime date %}
-            by <a href="/">Kot</a>
+            Published {% datetime date %} by
+            <a href="/">Kot</a>
         </p>
         <p>{{ desc }}</p>
     </header>
@@ -15,8 +15,19 @@ layout: "layouts/base.njk"
         {{ content | safe }}
     </main>
     <section>
-        <details id="comments">
-            <summary id="commentsSummary">Comments (TODO)</summary>
+        <details id="comments" open>
+            <summary id="comments-summary">Comments</summary>
+            <noscript>Comments require JavaScript.</noscript>
+            {# <p>Loading...</p> #}
         </details>
     </section>
 </article>
+<style>
+    #comments {
+        margin-top: var(--spacing-section);
+        cursor: pointer;
+    }
+    #comments-summary {
+        margin-bottom: var(--spacing-content);
+    }
+</style>
