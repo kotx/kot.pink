@@ -1,7 +1,5 @@
 ---
-title: "Kot C."
 default_title: "Kot C."
-desc: "Heya! This is where I document my thoughts and the results of my adventures."
 ---
 
 <!doctype html>
@@ -9,7 +7,7 @@ desc: "Heya! This is where I document my thoughts and the results of my adventur
     <head>
         <meta charset="utf-8"/>
         <title>
-            {% if title != default_title %}
+            {% if title %}
                 {{ title }} -
             {% endif %}
             {{ default_title }}</title>
@@ -20,7 +18,7 @@ desc: "Heya! This is where I document my thoughts and the results of my adventur
         <meta property="og:site_name" content="{{ site.name }}"/>
         <meta property="og:title" content="{{ title }}"/>
         <meta name="description" content="{{ desc }}"/>
-        <meta name="theme-color" content="#ec4899"/>
+        <meta name="theme-color" content="#fc44bc"/>
         <link rel="me" href="https://awau.social/@kot"/>
         <meta property="og:url" content="{{ site.base }}"/>
         <meta property="og:image" content="{{ site.image_url }}"/>
