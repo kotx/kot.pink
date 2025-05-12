@@ -48,6 +48,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addDataExtension("yaml", (content) => yaml.load(content));
   eleventyConfig.addPassthroughCopy("site.css");
+  eleventyConfig.ignores.add("README.md");
 
   eleventyConfig.addShortcode("datetime", (date, iso = false) => {
     const dateObj = date === "now" ? new Date() : new Date(date);
