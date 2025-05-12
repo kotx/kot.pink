@@ -1,4 +1,5 @@
 ---
+title: "Kot C."
 default_title: "Kot C."
 ---
 
@@ -7,7 +8,7 @@ default_title: "Kot C."
     <head>
         <meta charset="utf-8"/>
         <title>
-            {% if title %}
+            {% if title != default_title %}
                 {{ title }} -
             {% endif %}
             {{ default_title }}</title>
