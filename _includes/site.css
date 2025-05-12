@@ -6,6 +6,14 @@
   --color-primary: oklch(69% 0.245 345.5);
   --color-secondary: oklch(81.22% 0.108 317);
 
+  @media (prefers-color-scheme: light) {
+    --color-bg: oklch(0.99 0.0021 115.35);
+    --color-text: oklch(0.17 0 0);
+    --color-text-secondary: oklch(0.46 0.2097 144);
+    --color-primary: oklch(59% 0.245 345.5);
+    --color-secondary: oklch(54.22% 0.108 317);
+  }
+
   /* Typography */
   --font-size-heading: 22pt;
   --font-family-base: system-ui, sans-serif;
@@ -30,7 +38,7 @@
   background-color: var(--color-bg);
   color: var(--color-text);
   padding: var(--spacing-base);
-  color-scheme: dark;
+  color-scheme: dark light;
 }
 
 a {
