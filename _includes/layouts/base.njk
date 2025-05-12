@@ -46,7 +46,7 @@ default_title: "Kot C."
             <code style="font-size: 0.8rem">
                 Built from
                 {% if git.repo.sha %}
-                    <a href="{{ pkg.repository.url }}/src/commit/{{ git.repo.sha }}" target="_blank">{{ git.repo.abbreviatedSha }}</a>
+                    <a href="{{ pkg.repository.url }}/commit/{{ git.repo.sha }}" target="_blank">{{ git.repo.abbreviatedSha }}</a>
                 {% else %}
                     unknown ref
                 {% endif %}
