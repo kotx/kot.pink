@@ -7,13 +7,14 @@ import anchor from "markdown-it-anchor";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
-  const meta = {
+  const site = {
+    name: "Kot's Website",
     base: "https://kot.pink",
     email: "kot@kot.pink",
-    desc: "Heya! This is where I document my thoughts and the results of my adventures.",
+    image_url: "https://cdn.kot.pink/avatar.png",
   };
 
-  eleventyConfig.addGlobalData("meta", meta);
+  eleventyConfig.addGlobalData("site", site);
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/rss.xml",
@@ -23,11 +24,11 @@ export default function (eleventyConfig) {
     metadata: {
       language: "en",
       title: "Kot's posts",
-      subtitle: meta.description,
-      base: meta.base,
+      subtitle: site.desc,
+      base: site.base,
       author: {
         name: "Kot",
-        email: meta.email,
+        email: site.email,
       },
     },
   });
@@ -51,10 +52,10 @@ export default function (eleventyConfig) {
     const dateDisplay = iso
       ? dateObj.toISOString()
       : dateObj.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        });
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
     return `<time datetime="${dateObj.toISOString()}">${dateDisplay}</time>`;
   });
 

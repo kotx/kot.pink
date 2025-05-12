@@ -1,7 +1,7 @@
 ---
 - name: Erisa
   url: https://erisa.uk
-  image: https://cdn.erisa.uk/avatars/common.png
+  image: https://cdn.erisa.uk/avatars/current.png
 - name: FloatingMilkshake
   url: https://floatingmilkshake.com
   image: https://cdn.floatingmilkshake.com/avatar.png
