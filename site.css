@@ -1,0 +1,95 @@
+:root {
+  /* Colors */
+  --color-bg: #101010;
+  --color-text: #f8f8f8;
+  --color-text-secondary: #fffc98;
+  --color-primary: #ff5eac;
+  --color-secondary: #d786de;
+
+  /* Typography */
+  --font-size-base: 14pt;
+  --font-size-code: 12pt;
+  --font-size-heading: 2rem;
+  --font-family-base: Inter, system-ui, sans-serif;
+  --font-family-variable: InterVariable, sans-serif;
+
+  /* Spacing */
+  --spacing-base: 2%;
+  --spacing-large: 5%;
+  --spacing-xlarge: 10%;
+  --spacing-content: 1rem;
+  --spacing-section: 2rem;
+
+  /* Base styles */
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: var(--spacing-base);
+  color-scheme: dark;
+
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-family-variable);
+  }
+
+  @media screen and (min-width: 900px) {
+    padding: var(--spacing-large) var(--spacing-xlarge) var(--spacing-base)
+      var(--spacing-xlarge);
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited:not(.nav, .header-anchor) {
+    color: var(--color-secondary);
+  }
+}
+
+nav {
+  display: flex;
+  gap: 0.25rem;
+  &::before {
+    content: "[";
+  }
+  &::after {
+    content: "]";
+  }
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-heading);
+  font-weight: 500;
+  margin-bottom: var(--spacing-content);
+  @media screen and (min-width: 900px) {
+    font-size: var(--font-size-heading);
+  }
+}
+
+aside {
+  color: var(--color-text-secondary);
+}
+
+pre {
+  font-feature-settings: normal;
+  padding: 0.75rem;
+  border-radius: 8px;
+  overflow: auto;
+  font-size: var(--font-size-code);
+}
+
+footer {
+  margin-top: var(--spacing-section);
+}
+
+#comments {
+  margin-top: var(--spacing-section);
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+---
+- name: Erisa
+  url: https://erisa.uk
+  image: https://cdn.erisa.uk/avatars/common.png
+- name: FloatingMilkshake
+  url: https://floatingmilkshake.com
+  image: https://cdn.floatingmilkshake.com/avatar.png
+- name: Coder Technologies, Inc.
+  url: https://coder.com
+  image: https://raw.githubusercontent.com/coder/presskit/main/logos/coder_logo_black_square.png
+- name: auravoid
+  url: https://auravoid.dev
+  image: https://github.com/auravoid.png
+- name: Zeryther
+  url: https://zeryther.com
+  image: https://github.com/Zeryther.png
+- name: wildesPepega
+  url: https://github.com/wildesPepega
+  image: https://github.com/wildesPepega.png
+- name: Spotlight
+  url: https://joscomputing.space
+  image: https://joscomputing.space/avatar/current.jpg
+- name: Arhan Chaudhary
+  url: https://arhan.sh
+  image: https://github.com/ArhanChaudhary.png
+- name: Nico Salm
+  url: https://salm.dev
+  image: https://github.com/nicosalm.png

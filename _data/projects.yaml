@@ -1,0 +1,13 @@
+---
+- name: kotx/render
+  desc: Caching layer for Cloudflare R2 object storage.
+  url: https://git.kot.pink/kot/render
+- name: kotx/aster
+  desc: A Cloudflare R2 interface for multipart file uploads.
+  url: https://git.kot.pink/kot/aster
+- name: kotx/dex-tailscale
+  desc: A proxy to allow OIDC authentication with Tailscale.
+  url: https://git.kot.pink/kot/dex-tailscale
+- name: kotx/laplace
+  desc: A program to use a Raspberry Pi Pico microcontroller for video game motion controls.
+  url: https://git.kot.pink/kot/laplace

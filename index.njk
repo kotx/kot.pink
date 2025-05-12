@@ -1,0 +1,73 @@
+---
+layout: "layouts/base.njk"
+---
+<header>
+    <h1>Kot C.</h1>
+    <p>
+        Aspiring software developer, sysadmin, computer scientist.
+        Proficient in Python, TypeScript, Rust, and Go.
+    </p>
+    <aside>
+        <i>I'm open to employment for internships in Fall 2025! Please contact me <a href="mailto:kot+intern@kot.pink">via email</a> or <a href="/contact">contact form</a>.</i>
+    </aside>
+</header>
+
+<h2>Recent Posts</h2>
+<ul class="list">
+    {% for post in collections.posts %}
+    <li>{% datetime post.date %} &ndash; <a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Projects</h2>
+<ul class="list">
+    {% for project in projects %}
+    <li>
+        <a href="{{ project.url }}">{{ project.name }}</a>
+        &ndash; {{ project.desc }}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Sponsors</h2>
+<p>
+    Thanks to these people for
+    <a target="_blank" href="https://github.com/sponsors/kotx">sponsoring me</a>!
+    Please be sure to check them out.
+</p>
+<ul class="list sponsors">
+    {% for sponsor in sponsors %}
+    <li title="{{ sponsor.name }}">
+        <a href="{{ sponsor.url }}" target="_blank">
+            <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" width="75" height="75" class="sponsor-img" />
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<style>
+    h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .sponsors {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .sponsor-img {
+        border-radius: 50%;
+    }
+</style>

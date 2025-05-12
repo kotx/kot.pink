@@ -1,0 +1,33 @@
+---
+layout: "layouts/base.njk"
+title: Contact
+---
+<h1>Contact Kot</h1>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<form method="POST" action="/api/contact">
+    <label for="name">Name or email:</label>
+    <input type="text" id="name" name="name" autocomplete="email" maxlength="1024" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" cols="50" rows="10" maxlength="4096" required></textarea>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAABSWpSec4rpfD-qd"></div>
+    <button type="submit">Send</button>
+</form>
+
+<style>
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+
+    input, textarea, .cf-turnstile {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        padding: 0.25rem 0.5rem;
+    }
+</style>

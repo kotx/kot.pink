@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% if title %}{{ title }} - {% endif %}Kot C.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+
+    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content="Kot's Website" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta name="description" content="{{ desc or meta.desc }}" />
+
+    <meta name="theme-color" content="#ec4899" />
+    <link rel="me" href="https://awau.social/@kot" />
+    <meta property="og:url" content="{{ meta.base }}" />
+    <meta property="og:image" content="{{ meta.base }}/img/avatar.jpg" />
+
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <nav>
+        <a class="nav" href="/">home</a> &middot;
+        <a class="nav" href="/contact">contact</a> &middot;
+        <a class="nav" href="/rss.xml" target="_blank">rss</a> &middot;
+        <a class="nav" href="{{ pkg.repository.url }}/src/commit/{{ git.repo.sha }}/{{ page.inputPath }}" target="_blank">src</a>
+    </nav>
+    {{ content | safe }}
+
+    <footer>
+        <p>&copy; Kot 2025. All rights reserved.</p>
+        <code style="font-size: 0.8rem">
+            Built from 
+            {% if git.repo.sha %}
+                <a href="{{ pkg.repository.url }}/src/commit/{{ git.repo.sha }}" target="_blank">{{ git.repo.abbreviatedSha }}</a>
+            {% else %}
+                unknown ref
+            {% endif %}
+            {% if git.dirty %}(dirty!){% endif %}
+            on {% datetime "now", true %}.
+        </code>
+    </footer>
+</body>
+</html>
