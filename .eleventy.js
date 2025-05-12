@@ -42,6 +42,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     transformOnRequest: false, // BUG: `eleventy --serve` exits immediately when this is true
+    sharpOptions: {
+      animated: true,
+    }
   });
 
   eleventyConfig.addDataExtension("yaml", (content) => yaml.load(content));
