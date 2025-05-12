@@ -5,8 +5,8 @@ layout: "layouts/base.njk"
 <header>
     <h1>Kot C.</h1>
     <p>
-        Aspiring software developer, sysadmin, computer scientist.
-                Proficient in Python, TypeScript, Rust, and Go.
+        Aspiring software developer, sysadmin, computer scientist. Proficient in Python, TypeScript, Rust, and
+        Go.
     </p>
     <aside>
         <i>I'm open to employment for internships in Fall 2025! Please contact me
@@ -36,13 +36,13 @@ layout: "layouts/base.njk"
 <p>
     Thanks to these people for
     <a target="_blank" href="https://github.com/sponsors/kotx">sponsoring me</a>!
-            Please be sure to check them out.
+                                    Please be sure to check them out.
 </p>
 <ul class="list sponsors">
     {% for sponsor in sponsors %}
         <li title="{{ sponsor.name }}">
             <a href="{{ sponsor.url }}" target="_blank">
-                <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" width="75" height="75" class="sponsor-img"/>
+                <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" eleventy:widths="75, 150, 300" loading="lazy" class="sponsor-img"/>
             </a>
         </li>
     {% endfor %}
@@ -67,5 +67,7 @@ layout: "layouts/base.njk"
     }
     .sponsor-img {
         border-radius: 50%;
+        width: 75px;
+        height: 75px;
     }
 </style>
