@@ -9,8 +9,9 @@ import anchor from "markdown-it-anchor";
 export default function (eleventyConfig) {
   const site = {
     name: "Kot's Website",
-    base: "https://kot.pink",
     email: "kot@kot.pink",
+    base: "https://kot.pink",
+    api_base: "https://site.kot.pink",
     image_url: "https://cdn.kot.pink/avatar.png",
   };
 

@@ -28,7 +28,7 @@ title: Contact
 
 <h2>Contact form</h2>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<form method="POST" action="/api/contact">
+<form method="POST" action="{{ site.api_base }}/contact">
     <label for="name">Name or email:</label>
     <input type="text" id="name" name="name" autocomplete="email" maxlength="1024" required/>
     <label for="message">Message</label>
